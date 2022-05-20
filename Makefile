@@ -27,6 +27,9 @@ $(NAME)	:	$(OBJS)
 run		:	all
 			./$(NAME) 4 2 -8 12 2147483647
 
+run2	:	all
+			./$(NAME) 4 2
+
 test1	:	all
 			./$(NAME) "123 1 2" "654 456 123"
 

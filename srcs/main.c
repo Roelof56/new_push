@@ -19,6 +19,10 @@ int	main(int argc, char **argv)
 		printf("sorted!\n"); // clean it.
 		return (0);
 	}
+
+	printf("stack after import\n");
+	print_stacks(stack_a, stack_b);
+
 	len = ft_lstsize(stack_a);
 	if (len <= 5)
 		handle_less(&stack_a, &stack_b);
