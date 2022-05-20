@@ -17,6 +17,7 @@ int is_sorted(t_list *head)
 	return (1);
 }
 
+//helper function for atoi
 static int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
