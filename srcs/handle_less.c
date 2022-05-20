@@ -91,7 +91,7 @@ static void	handle_three(t_list **head)
 
 void	handle_less(t_list **head_a, t_list **head_b)
 {
-	int len_a;
+	int	len_a;
 
 	len_a = ft_lstsize(*(head_a));
 	if (len_a < 3)
