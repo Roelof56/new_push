@@ -17,41 +17,6 @@ int is_sorted(t_list *head)
 	return (1);
 }
 
-void	print_stacks(t_list *stack_a, t_list *stack_b)
-{
-	t_list	*a;
-	t_list	*b;
-
-	a = stack_a;
-	b = stack_b;
-	printf("stack:     a   |   b\n");
-	printf("       __________________\n");
-	while (a || b)
-	{
-		if (a)
-		{
-			printf("  %12d |", a->nbr);
-			a = a->next;
-		}
-		else
-		{
-			printf("%14c |", '.');
-		}
-		
-		if (b)
-		{
-			printf("%4d ", b->nbr);
-			b = b->next;
-		}
-		else
-		{
-			printf("%2c", '.');
-		}
-		printf("\n");
-	}
-	printf("\n");
-}
-
 static int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
@@ -85,4 +50,39 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res * min);
+}
+
+void	print_stacks(t_list *stack_a, t_list *stack_b)
+{
+	t_list	*a;
+	t_list	*b;
+
+	a = stack_a;
+	b = stack_b;
+	printf("stack:     a   |   b\n");
+	printf("       __________________\n");
+	while (a || b)
+	{
+		if (a)
+		{
+			printf("  %9d (%d)|", a->nbr, a->sign);
+			a = a->next;
+		}
+		else
+		{
+			printf("%14c |", '.');
+		}
+		
+		if (b)
+		{
+			printf("%4d ", b->nbr);
+			b = b->next;
+		}
+		else
+		{
+			printf("%2c", '.');
+		}
+		printf("\n");
+	}
+	printf("\n");
 }
