@@ -20,11 +20,14 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	len = ft_lstsize(stack_a);
-	// if (len <= 5)
-	// 	handle_less(&stack_a, &stack_b);
+	if (len <= 5)
+		handle_less(&stack_a, &stack_b);
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b);
+
+	printf("final stack print:\n");
 	print_stacks(stack_a, stack_b);
+	
 	// clean_that_list(program.head_a);
 	return (0);
 }

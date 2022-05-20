@@ -9,6 +9,7 @@ SRCS			=	srcs/main.c \
 					srcs/op_rotate.c \
 					srcs/op_swap.c \
 					srcs/parse_input.c \
+					srcs/handle_less.c \
 
 FLAGS			=	-Wall -Wextra -Werror #-g -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)

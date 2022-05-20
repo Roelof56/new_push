@@ -35,6 +35,9 @@ void	sa(t_list **head_a, t_bool print);
 void	sb(t_list **head_b, t_bool print);
 void	ss(t_list **head_a, t_list **head_b);
 
+/* handle_less.c */
+void	handle_less(t_list **head_a, t_list **head_b);
+
 /* parse_input.c */
 int		import_arguments(int argc, char **argv, t_list **stack_a);
 int		create_list(int argc, char **argv, t_list **stack_a);
