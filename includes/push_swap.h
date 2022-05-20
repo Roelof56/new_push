@@ -6,6 +6,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
+
 typedef enum e_bool { false, true }	t_bool;
 
 typedef struct s_list

@@ -12,7 +12,6 @@ int	main(int argc, char **argv)
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
 		write(2, "Error\n", 6);
-		//clean that linked list, you fool.
 		return (0);
 	}
 	if (is_sorted(stack_a) == 1)
@@ -25,7 +24,6 @@ int	main(int argc, char **argv)
 	// 	handle_less(&stack_a, &stack_b);
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b);
-	
 	print_stacks(stack_a, stack_b);
 	// clean_that_list(program.head_a);
 	return (0);

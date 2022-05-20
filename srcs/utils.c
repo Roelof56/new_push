@@ -59,13 +59,13 @@ void	print_stacks(t_list *stack_a, t_list *stack_b)
 
 	a = stack_a;
 	b = stack_b;
-	printf("stack:     a   |   b\n");
-	printf("       __________________\n");
+	printf("stack:        a   |   b\n");
+	printf("       _____________________\n");
 	while (a || b)
 	{
 		if (a)
 		{
-			printf("  %8d (%2d)|", a->nbr, a->sign);
+			printf("  %11d (%2d)|", a->nbr, a->sign);
 			a = a->next;
 		}
 		else
