@@ -43,8 +43,8 @@ int		ft_lstsize(t_list *head);
 t_list	*ft_lstlast(t_list *lst);
 
 /* utils.c */
-void	print_stacks(t_list *stack_a, t_list *stack_b);
 int		is_sorted(t_list *head);
 int		ft_atoi(const char *str);
+void	print_stacks(t_list *stack_a, t_list *stack_b);
 
 #endif
