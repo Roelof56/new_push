@@ -65,7 +65,7 @@ void	print_stacks(t_list *stack_a, t_list *stack_b)
 	{
 		if (a)
 		{
-			printf("  %9d (%d)|", a->nbr, a->sign);
+			printf("  %8d (%2d)|", a->nbr, a->sign);
 			a = a->next;
 		}
 		else
@@ -80,7 +80,7 @@ void	print_stacks(t_list *stack_a, t_list *stack_b)
 		}
 		else
 		{
-			printf("%2c", '.');
+			printf("%4c", '.');
 		}
 		printf("\n");
 	}
