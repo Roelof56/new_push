@@ -27,7 +27,7 @@ test1	:	all
 			./$(NAME) "123 1 2" "654 456 123"
 
 run		:	all
-			./$(NAME) 4 2 8
+			./$(NAME) 4 2 -8
 
 clean	:
 	    	$(RM) $(OBJS)
