@@ -18,27 +18,21 @@ int	check_args(int argc, char **argv)
 	int	j;
 
 	i = 1;
-	printf("\nargument parsing time: \n");
 	while (i < argc)
 	{
 		j = 0;
-		printf(":");
 		if (argv[i][j] == 43 || argv[i][j] == 45 || ft_isdigit(argv[i][j]))
-		{
-			printf("%c", argv[i][j]);
 			j++;
-		}
+		else
+			return (-1);
 		while (argv[i][j])
 		{
 			if (ft_isdigit(argv[i][j]) == 0)
-				return (-1); // 
-			printf("%c", argv[i][j]);
+				return (-1);
 			j++;
 		}
-		printf("\n");
 		i++;
 	}
-	printf("end check args\n\n");
 	return (1);
 }
 
