@@ -11,12 +11,12 @@ int	main(int argc, char **argv)
 	//maybe do spellcheck here instead of inside of import arguments?
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
-		write(2, "Error\n", 6);
+		write(2, "Error\n", 6); // clean that list.
 		return (0);
 	}
 	if (is_sorted(stack_a) == 1)
 	{
-		printf("sorted!\n"); // clean it.
+		printf("sorted!\n"); // clean that list.
 		return (0);
 	}
 
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	print_stacks(stack_a, stack_b);
 
 	len = ft_lstsize(stack_a);
-	if (len <= 5)
+	if (len <= 6)
 		handle_less(&stack_a, &stack_b);
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b);
