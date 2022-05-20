@@ -9,13 +9,10 @@ t_list	*ft_lstnew(int nbr)
 		return (NULL);
 	new->nbr = nbr;
 	new->next = NULL;
-	new->sign = 1;
 	if (nbr < 0)
-	{
-		// new->nbr = flip_bits(nbr);
-		new->nbr = nbr;
 		new->sign = -1;
-	}
+	else
+		new->sign = 1;
 	return (new);
 }
 
