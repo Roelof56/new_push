@@ -11,12 +11,12 @@ int	main(int argc, char **argv)
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
 		write(2, "Error\n", 6);
-		//some exit cleaning function.
+		//clean that linked list, you fool.
 		return (0);
 	}
 	if (is_sorted(stack_a) == 1)
 	{
-		printf("sorted!\n");
+		printf("sorted!\n"); // clean it.
 		return (0);
 	}
 	len = ft_lstsize(stack_a);
