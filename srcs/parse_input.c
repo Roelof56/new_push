@@ -1,23 +1,44 @@
 #include "push_swap.h"
 
-// static int is_valid_int(long int x)
-// {
-// 	if (x > INT_MAX || x < INT_MIN)
-// 		return (-1);
-// 	return (1);
-// }
-
 int	import_arguments(int argc, char **argv, t_list **stack_a)
 {
 	int		i;
 
 	i = 0;
-	if (create_list(argc, argv, stack_a) < 0)
-	{
-		printf("test 12\n");
+	if (check_args(argc, argv) < 0)
 		return (-1);
+	if (create_list(argc, argv, stack_a) < 0)
+		return (-1);
+	return (1);
+}
+
+int	check_args(int argc, char **argv)
+{
+	int i;
+	int	j;
+
+	i = 1;
+	printf("\nargument parsing time: \n");
+	while (i < argc)
+	{
+		j = 0;
+		printf(":");
+		if (argv[i][j] == 43 || argv[i][j] == 45 || ft_isdigit(argv[i][j]))
+		{
+			printf("%c", argv[i][j]);
+			j++;
+		}
+		while (argv[i][j])
+		{
+			if (ft_isdigit(argv[i][j]) == 0)
+				return (-1); // 
+			printf("%c", argv[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
 	}
-	// print_array(program->array, program->len_a);
+	printf("end check args\n\n");
 	return (1);
 }
 
@@ -43,3 +64,10 @@ int	create_list(int argc, char **argv, t_list **stack_a)
 	}
 	return (1);
 }
+
+// static int is_valid_int(long int x)
+// {
+// 	if (x > INT_MAX || x < INT_MIN)
+// 		return (-1);
+// 	return (1);
+// }

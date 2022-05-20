@@ -4,7 +4,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
-#  include <unistd.h>
+# include <unistd.h>
 
 typedef enum e_bool { false, true }	t_bool;
 
@@ -35,6 +35,7 @@ void	ss(t_list **head_a, t_list **head_b);
 /* parse_input.c */
 int		import_arguments(int argc, char **argv, t_list **stack_a);
 int		create_list(int argc, char **argv, t_list **stack_a);
+int		check_args(int argc, char **argv);
 
 /* utils_list.c */
 t_list	*ft_lstnew(int nbr);
@@ -44,6 +45,7 @@ t_list	*ft_lstlast(t_list *lst);
 
 /* utils.c */
 int		is_sorted(t_list *head);
+int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 void	print_stacks(t_list *stack_a, t_list *stack_b);
 

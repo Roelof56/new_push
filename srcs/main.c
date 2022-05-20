@@ -8,6 +8,7 @@ int	main(int argc, char **argv)
 
 	if (argc <= 2)
 		return (0);
+	//maybe do spellcheck here instead of inside of import arguments?
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
 		write(2, "Error\n", 6);
