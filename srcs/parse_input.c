@@ -36,24 +36,19 @@ int	check_args(int argc, char **argv)
 	return (1);
 }
 
-static int is_valid_int(long int x)
+static int is_valid_int(long x)
 {
-	// printf("int_min: %ld\n", INT_MIN);
-	// printf("%ld\n", x);
-	if (x < -2147483648)
-	{
-		printf("int to small!\n");
+	if (x < INT_MIN || x > INT_MAX)
 		return (-1);
-	}
 	return (1);
 }
 
 // malloc protection is important to add. also the loc argument can go!!!
 int	create_list(int argc, char **argv, t_list **stack_a)
 {
-	t_list		*new;
-	long int	tmp;
-	int			i;
+	t_list	*new;
+	long	tmp;
+	int		i;
 
 	i = 1;
 	new = NULL;

@@ -49,7 +49,7 @@ t_list	*ft_lstlast(t_list *lst);
 /* utils.c */
 int		is_sorted(t_list *head);
 int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 void	print_stacks(t_list *stack_a, t_list *stack_b);
 
 #endif
