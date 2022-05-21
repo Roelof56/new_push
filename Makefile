@@ -30,6 +30,9 @@ run		:	all
 run6	:	all
 			./$(NAME) 4 2 -8 12 15 1
 
+run9	:	all
+			./$(NAME) 4 2 -8 12 15 1 -2 -1 30 
+
 run2	:	all
 			./$(NAME) 4 2
 

@@ -20,11 +20,11 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 
-	printf("stack after import\n");
+	printf("present opening stacks \n");
 	print_stacks(stack_a, stack_b);
 
 	len = ft_lstsize(stack_a);
-	if (len <= 6)
+	if (len <= 9)
 		handle_less(&stack_a, &stack_b);
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b);
