@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	// print_stacks(stack_a, stack_b);
 
 	len = ft_lstsize(stack_a);
-	if (len <= 100)
+	if (len <= 500)
 		handle_less(&stack_a, &stack_b);
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b); //cooler name?
@@ -35,3 +35,4 @@ int	main(int argc, char **argv)
 	// clean_that_list(program.head_a);
 	return (0);
 }
+
