@@ -15,6 +15,7 @@ FLAGS			=	-Wall -Wextra -Werror #-g -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
 
 ARG5			=	7 9 1 3 5 
+ARG6			=	4 2 -8 12 15 1
 ARG9			=	-50 -150 -250 -200 -300 -350 -400 -500 -600
 ARG31			=	14 20 11 12 16 19 24 18 8 7 6 3 4 5 9 0 -14 -20 -10 -12 -16 -21 -24 -18 -8 -7 -6 -3 -4 -5 -9 
 
@@ -32,7 +33,7 @@ run		:	all
 			./$(NAME) $(ARG5)
 
 run6	:	all
-			./$(NAME) 4 2 -8 12 15 1
+			./$(NAME) $(ARG6)
 
 run9	:	all
 			./$(NAME) $(ARG9)
