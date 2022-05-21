@@ -14,7 +14,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror #-g -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
 
-ARG1			= 2 1 3 6 5 -8 +4 -100 23456
+ARG1			= 4 2 0 6 -6 -4 +8 -2 -8 10 
 
 all		: 	$(NAME)
 
