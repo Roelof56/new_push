@@ -16,12 +16,12 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(stack_a) == 1)
 	{
-		printf("sorted!\n"); // clean that list.
+		// printf("sorted!\n"); // clean that list.
 		return (0);
 	}
 
-	printf("present opening stacks \n");
-	print_stacks(stack_a, stack_b);
+	// printf("present opening stacks \n");
+	// print_stacks(stack_a, stack_b);
 
 	len = ft_lstsize(stack_a);
 	if (len <= 9)
@@ -29,8 +29,8 @@ int	main(int argc, char **argv)
 	// else
 	// 	radix_bit_sort(&stack_a, &stack_b);
 
-	printf("final stack print:\n");
-	print_stacks(stack_a, stack_b);
+	// printf("final stack print:\n");
+	// print_stacks(stack_a, stack_b);
 	
 	// clean_that_list(program.head_a);
 	return (0);
