@@ -14,7 +14,8 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror #-g -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
 
-ARG1			=	14 20 11 12 16 19 24 18 8 7 6 3 4 5 9 0 -14 -20 -10 -12 -16 -21 -24 -18 -8 -7 -6 -3 -4 -5 -9 
+ARG9			=	-50 -150 -250 -200 -300 -350 -400 -500 -600
+ARG31			=	14 20 11 12 16 19 24 18 8 7 6 3 4 5 9 0 -14 -20 -10 -12 -16 -21 -24 -18 -8 -7 -6 -3 -4 -5 -9 
 
 
 all		: 	$(NAME)
@@ -33,13 +34,13 @@ run6	:	all
 			./$(NAME) 4 2 -8 12 15 1
 
 run9	:	all
-			./$(NAME) $(ARG1)
+			./$(NAME) $(ARG9)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG1)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG31)
 			
 checker	:	all
-			./$(NAME) $(ARG1) | ./checker_Mac $(ARG1)
+			./$(NAME) $(ARG31) | ./checker_Mac $(ARG31)
 
 clean	:
 	    	$(RM) $(OBJS)
