@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 	if (len <= 9)
 		handle_less(&stack_a, &stack_b);
 	// else
-	// 	radix_bit_sort(&stack_a, &stack_b);
+	// 	radix_bit_sort(&stack_a, &stack_b); //cooler name?
 
 	// printf("final stack print:\n");
 	// print_stacks(stack_a, stack_b);
