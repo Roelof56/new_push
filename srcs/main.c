@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 	// 	radix_bit_sort(&stack_a, &stack_b); //cooler name?
 
 	// printf("final stack print:\n");
-	// print_stacks(stack_a, stack_b);
+	print_stacks(stack_a, stack_b);
 	
 	// clean_that_list(program.head_a);
 	return (0);

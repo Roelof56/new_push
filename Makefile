@@ -28,7 +28,7 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) 4 2 -8 12 2147483647
+			./$(NAME) 2147483647 -2147483647 -2147483648
 
 run6	:	all
 			./$(NAME) 4 2 -8 12 15 1
