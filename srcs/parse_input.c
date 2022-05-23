@@ -1,18 +1,13 @@
 #include "push_swap.h"
 
-int	import_arguments(int argc, char **argv, t_list **stack_a)
+static int is_valid_int(long x)
 {
-	int		i;
-
-	i = 0;
-	if (check_args(argc, argv) < 0)
-		return (-1);
-	if (create_list(argc, argv, stack_a) < 0)
+	if (x < INT_MIN || x > INT_MAX)
 		return (-1);
 	return (1);
 }
 
-int	check_args(int argc, char **argv)
+static int	check_args(int argc, char **argv)
 {
 	int i;
 	int	j;
@@ -36,15 +31,7 @@ int	check_args(int argc, char **argv)
 	return (1);
 }
 
-static int is_valid_int(long x)
-{
-	if (x < INT_MIN || x > INT_MAX)
-		return (-1);
-	return (1);
-}
-
-// malloc protection is important to add. also the loc argument can go!!!
-int	create_list(int argc, char **argv, t_list **stack_a)
+static int	create_list(int argc, char **argv, t_list **stack_a)
 {
 	t_list	*new;
 	long	tmp;
@@ -66,3 +53,39 @@ int	create_list(int argc, char **argv, t_list **stack_a)
 	return (1);
 }
 
+static int	check_for_duplicates(t_list *head)
+{
+	t_list *cpy;
+
+	while (head)
+	{
+		cpy = head->next;
+		while (cpy)
+		{
+			if (head->nbr == cpy->nbr)
+			{
+				printf("DUPLICATE FOUND!\n");
+				return (-1);
+			}
+			printf("%d, %d\n", head->nbr, cpy->nbr);
+			cpy = cpy->next;
+		}
+		printf("\n");
+		head = head->next;
+	}
+	return (1);
+}
+
+int	import_arguments(int argc, char **argv, t_list **stack_a)
+{
+	int		i;
+
+	i = 0;
+	if (check_args(argc, argv) < 0)
+		return (-1);
+	if (create_list(argc, argv, stack_a) < 0)
+		return (-1);
+	if (check_for_duplicates(*(stack_a)) < 0)
+		return (-1);
+	return (1);
+}
