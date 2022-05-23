@@ -37,7 +37,7 @@ show	:	all
 			python3 ./push_swap_visualizer/pyviz.py $(ARG9)
 			
 checker	:	all
-			./$(NAME) $(ARG31) | ./checker_Mac $(ARG31)
+			./$(NAME) $(ARG9) | ./checker_Mac $(ARG9)
 
 clean	:
 	    	$(RM) $(OBJS)

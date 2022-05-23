@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	// print_stacks(stack_a, stack_b);
 
 	len = ft_lstsize(stack_a);
-	if (len <= 5)
+	if (len <= 400)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b);
