@@ -63,14 +63,10 @@ static int	check_for_duplicates(t_list *head)
 		while (cpy)
 		{
 			if (head->nbr == cpy->nbr)
-			{
-				printf("DUPLICATE FOUND!\n");
-				return (-1);
-			}
-			printf("%d, %d\n", head->nbr, cpy->nbr);
+				return (-1); // printf("DUPLICATE FOUND!\n");
+			// printf("%d, %d\n", head->nbr, cpy->nbr); 		//shows comparisons.
 			cpy = cpy->next;
 		}
-		printf("\n");
 		head = head->next;
 	}
 	return (1);

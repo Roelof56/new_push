@@ -10,6 +10,7 @@ SRCS			=	srcs/main.c \
 					srcs/op_swap.c \
 					srcs/parse_input.c \
 					srcs/handle_less.c \
+					srcs/radix_bit_sort.c \
 
 FLAGS			=	-Wall -Wextra -Werror #-g -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
@@ -30,16 +31,10 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) $(ARG5)
-
-run6	:	all
-			./$(NAME) $(ARG6)
-
-run9	:	all
 			./$(NAME) $(ARG9)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG31)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG9)
 			
 checker	:	all
 			./$(NAME) $(ARG31) | ./checker_Mac $(ARG31)
