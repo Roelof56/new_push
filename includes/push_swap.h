@@ -18,13 +18,13 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct s_low_info
+typedef struct s_low2
 {
-	int	low;
-	int	l_loc;
-	int sec_low;
-	int	sl_loc;
-}		t_low_info;
+	int	first;
+	int	first_loc;
+	int second;
+	int	sec_loc;
+}		t_low2;
 
 /* stack operation functions */
 /* push */

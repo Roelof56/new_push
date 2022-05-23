@@ -25,24 +25,25 @@
 // 	return (lowest_loc);
 // }
 
-static void	get_lowest_two(t_list *head, t_low_info *data)
+static void	get_lowest_two(t_list *head, t_low2 *data)
 {
 	int	i;
 
 	i = 0;
-	data->low = INT_MAX;
-	data->sec_low = INT_MAX;
+	data->first = INT_MAX;
+	data->second = INT_MAX;
 	while (head)
 	{
-		if (head->nbr < data->low)
+		if (head->nbr < data->first)
 		{
-			data->low = head->nbr;
-			data->l_loc = i;
+			data->second = data->first;
+			data->first = head->nbr;
+			data->first_loc = i;
 		}
-		else if (head->nbr < data->sec_low && head->nbr > data->low)
+		else if (head->nbr < data->second && head->nbr != data->first)
 		{
-			data->sec_low = head->nbr;
-			data->sl_loc = i;
+			data->second = head->nbr;
+			data->sec_loc = i;
 		}
 		i++;
 		head = head->next;
@@ -57,7 +58,7 @@ static void	split_stack(t_list **head_a, t_list **head_b)
 	// int	low_loc;
 	// int	current_low;
 
-	t_low_info data;
+	t_low2 data;
 
 	// get_lowest_two(*(head_a), &data);
 	// printf("first low: %d (%d)\n", data.low, data.l_loc);
@@ -68,16 +69,16 @@ static void	split_stack(t_list **head_a, t_list **head_b)
 	while (len_a > 3)
 	{
 		get_lowest_two(*(head_a), &data);
-		printf("first low: %d (%d)\n", data.low, data.l_loc);
-		printf("second low: %d (%d)\n", data.sec_low, data.sl_loc);
-		if (data.l_loc <= (len_a / 2))
+		printf("first low: %d (%d)\n", data.first, data.first_loc);
+		printf("second low: %d (%d)\n", data.second, data.sec_loc);
+		if (data.first_loc <= (len_a / 2))
 		{
-			while ((*(head_a))->nbr != data.low)
+			while ((*(head_a))->nbr != data.first)
 				ra(head_a, true);
 		}
 		else
 		{
-			while ((*(head_a))->nbr != data.low)
+			while ((*(head_a))->nbr != data.first)
 				rra(head_a, true);
 		}
 		pb(head_a, head_b);
