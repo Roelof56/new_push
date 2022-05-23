@@ -68,7 +68,8 @@ static void	split_stack(t_list **head_a, t_list **head_b)
 	while (len_a > 3)
 	{
 		get_lowest_two(*(head_a), &data);
-		// low_loc = get_lowest((*(head_a)), &current_low);
+		printf("first low: %d (%d)\n", data.low, data.l_loc);
+		printf("second low: %d (%d)\n", data.sec_low, data.sl_loc);
 		if (data.l_loc <= (len_a / 2))
 		{
 			while ((*(head_a))->nbr != data.low)
