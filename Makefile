@@ -31,7 +31,7 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) $(ARG9)
+			./$(NAME) $(ARG30)
 
 show	:	all
 			python3 ./push_swap_visualizer/pyviz.py $(ARG9)
