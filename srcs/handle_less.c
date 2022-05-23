@@ -128,4 +128,10 @@ void	handle_less(t_list **head_a, t_list **head_b)
 	handle_three(head_a);
 	while (*(head_b))
 		pa(head_a, head_b);
+	// testing time;
+	t_low_info data;
+	get_lowest_two(*(head_a), &data);
+	printf("first low: %d (%d)\n", data.low, data.l_loc);
+	printf("second low: %d (%d)\n", data.sec_low, data.sl_loc);
+	print_stacks(*(head_a), *(head_b));
 }
