@@ -25,6 +25,30 @@ static int	get_lowest(t_list *head, int *low)
 	return (lowest_loc);
 }
 
+static void	get_lowest_two(t_list *head, t_low_info *data)
+{
+	int	i;
+
+	i = 0;
+	data->low = INT_MAX;
+	data->sec_low = INT_MAX;
+	while (head)
+	{
+		if (head->nbr < data->low)
+		{
+			data->low = head->nbr;
+			data->l_loc = i;
+		}
+		else if (head->nbr < data->sec_low && head->nbr > data->low)
+		{
+			data->sec_low = head->nbr;
+			data->sl_loc = i;
+		}
+		i++;
+		head = head->next;
+	}
+}
+
 static void	handle_two(t_list **head)
 {
 	int		one;
@@ -104,4 +128,10 @@ void	handle_less(t_list **head_a, t_list **head_b)
 	handle_three(head_a);
 	while (*(head_b))
 		pa(head_a, head_b);
+	// testing time;
+	t_low_info data;
+	get_lowest_two(*(head_a), &data);
+	printf("first low: %d (%d)\n", data.low, data.l_loc);
+	printf("second low: %d (%d)\n", data.sec_low, data.sl_loc);
+	print_stacks(*(head_a), *(head_b));
 }
