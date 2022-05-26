@@ -20,12 +20,12 @@ void	ft_lstadd_back(t_list **head, t_list *new)
 {
 	t_list	*tail;
 
-	if (!*head)
+	tail = *(head);
+	if (!tail)
 	{
-		*head = new;
+		*(head) = new;
 		return ;
 	}
-	tail = *head;
 	while (tail->next != NULL)
 		tail = tail->next;
 	tail->next = new;
