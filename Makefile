@@ -15,6 +15,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror
 OBJS			=	$(SRCS:.c=.o)
 
+ARG				=	`seq 0 200 | sort -R | tr "\n" " "`
 ARG6			=	4 2 -8 12 15 1
 ARG7			=	7 4 1 -100 9 11 -50 
 ARG9			=	-50 -150 -250 -200 -300 -350 -400 -500 -600
