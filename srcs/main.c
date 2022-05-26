@@ -1,5 +1,17 @@
 #include "push_swap.h"
 
+static void	clean_list(t_list *head)
+{
+	t_list *next;
+
+	while (head)
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
@@ -33,8 +45,8 @@ int	main(int argc, char **argv)
 
 	// printf("final stack print:\n");
 	// print_stacks(stack_a, stack_b);
-	
-	// clean_that_list(program.head_a);
+	system("leaks push_swap");
+	// clean_list(stack_a);
 	return (0);
 }
 
