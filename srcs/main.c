@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 
 	// printf("final stack print:\n");
 	// print_stacks(stack_a, stack_b);
-	system("leaks push_swap");
+	// system("leaks push_swap");
 	// clean_list(stack_a);
 	return (0);
 }
