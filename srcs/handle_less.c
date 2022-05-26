@@ -1,84 +1,48 @@
 #include "push_swap.h"
 
-// static int	get_lowest(t_list *head, int *low)
-// {
-// 	t_list	*copy;
-// 	int		lowest_nbr;
-// 	int		lowest_loc;
-// 	int		i;
-
-// 	copy = head;
-// 	lowest_nbr = INT_MAX;
-// 	lowest_loc = 0;
-// 	i = 0;
-// 	while (copy)
-// 	{
-// 		if (copy->nbr < lowest_nbr)
-// 		{
-// 			lowest_nbr = copy->nbr;
-// 			lowest_loc = i;
-// 		}
-// 		i++;
-// 		copy = copy->next;
-// 	}
-// 	*low = lowest_nbr;
-// 	return (lowest_loc);
-// }
-
-static void	get_lowest_two(t_list *head, t_low2 *data)
+static int	get_lowest(t_list *head, int *low)
 {
-	int	i;
+	t_list	*copy;
+	int		lowest_nbr;
+	int		lowest_loc;
+	int		i;
 
+	copy = head;
+	lowest_nbr = INT_MAX;
+	lowest_loc = 0;
 	i = 0;
-	data->first = INT_MAX;
-	data->second = INT_MAX;
-	while (head)
+	while (copy)
 	{
-		if (head->nbr < data->first)
+		if (copy->nbr < lowest_nbr)
 		{
-			data->second = data->first;
-			data->first = head->nbr;
-			data->first_loc = i;
-		}
-		else if (head->nbr < data->second && head->nbr != data->first)
-		{
-			data->second = head->nbr;
-			data->sec_loc = i;
+			lowest_nbr = copy->nbr;
+			lowest_loc = i;
 		}
 		i++;
-		head = head->next;
+		copy = copy->next;
 	}
+	*low = lowest_nbr;
+	return (lowest_loc);
 }
-
-
 
 static void	split_stack(t_list **head_a, t_list **head_b)
 {
 	int	len_a;
-	// int	low_loc;
-	// int	current_low;
-
-	t_low2 data;
-
-	// get_lowest_two(*(head_a), &data);
-	// printf("first low: %d (%d)\n", data.low, data.l_loc);
-	// printf("second low: %d (%d)\n", data.sec_low, data.sl_loc);
-	// print_stacks(*(head_a), *(head_b));
+	int	low_loc;
+	int	current_low;
 
 	len_a = ft_lstsize(*(head_a));
 	while (len_a > 3)
 	{
-		get_lowest_two(*(head_a), &data);
-		// printf("first low: %d (%d)\n", data.first, data.first_loc);
-		// printf("second low: %d (%d)\n", data.second, data.sec_loc); // add print stack to verify the location.
-		if (data.first_loc <= (len_a / 2))
+		get_lowest(*(head_a), &current_low);
+		if (low_loc <= (len_a / 2))
 		{
-			while ((*(head_a))->nbr != data.first)
+			while ((*(head_a))->nbr != current_low)
 				ra(head_a, true);
 		}
 		else
 		{
-			while ((*(head_a))->nbr != data.first)
+			while ((*(head_a))->nbr != current_low)
 				rra(head_a, true);
 		}
 		pb(head_a, head_b);
@@ -113,18 +77,6 @@ static void	handle_three(t_list **head)
 	}
 }
 
-static void	handle_two(t_list **head)
-{
-	int		one;
-	int		two;
-
-	one = (*(head))->nbr;
-	two = (*(head))->next->nbr;
-	if (one > two)
-		sa(head, true);
-	return ;
-}
-
 void	handle_less(t_list **head_a, t_list **head_b)
 {
 	int	len_a;
@@ -132,7 +84,8 @@ void	handle_less(t_list **head_a, t_list **head_b)
 	len_a = ft_lstsize(*(head_a));
 	if (len_a < 3)
 	{
-		handle_two(head_a);
+		if ((*(head_a))->nbr > (*(head_a))->next->nbr)
+			sa(head_a, true);
 		return ;
 	}
 	else

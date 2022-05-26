@@ -15,7 +15,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror
 OBJS			=	$(SRCS:.c=.o)
 
-ARG				=	`seq 0 200 | sort -R | tr "\n" " "`
+ARG				=	`seq 0 50 | sort -R | tr "\n" " "`
 ARG6			=	4 2 -8 12 15 1
 ARG7			=	7 4 1 -100 9 11 -50 
 ARG9			=	-50 -150 -250 -200 -300 -350 -400 -500 -600
@@ -32,13 +32,13 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) $(ARG7)
+			./$(NAME) $(ARG9)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG7)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG)
 			
 checker	:	all
-			./$(NAME) $(ARG7) | ./checker_Mac $(ARG7)
+			./$(NAME) $(ARG) | ./checker_Mac $(ARG)
 
 clean	:
 	    	$(RM) $(OBJS)
@@ -48,4 +48,4 @@ fclean	: 	clean
 
 re		:	fclean all
 
-.PHONY	:	clean fclean re all run test1
+.PHONY	:	clean fclean re all run
