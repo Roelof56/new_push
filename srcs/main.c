@@ -6,6 +6,8 @@ int	main(int argc, char **argv)
 	t_list	*stack_b;
 	int		len;
 
+	stack_a = NULL;
+	stack_b = NULL;
 	if (argc <= 2)
 		return (0);
 	//maybe do spellcheck here instead of inside of import arguments?
