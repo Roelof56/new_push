@@ -22,7 +22,6 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	if (argc <= 2)
 		return (0);
-	//maybe do spellcheck here instead of inside of import arguments?
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
 		write(2, "Error\n", 6); // clean that list.
@@ -30,22 +29,14 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(stack_a) == 1)
 	{
-		// printf("sorted!\n"); // clean that list.
+		// clean that list.
 		return (0);
 	}
-
-	// printf("present opening stacks \n");
-	// print_stacks(stack_a, stack_b);
-
 	len = ft_lstsize(stack_a);
 	if (len <= 5)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b);
-
-	// printf("final stack print:\n");
-	// print_stacks(stack_a, stack_b);
-	// system("leaks push_swap");
 	// clean_list(stack_a);
 	return (0);
 }
