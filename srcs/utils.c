@@ -70,7 +70,7 @@ void	print_stacks(t_list *stack_a, t_list *stack_b)
 		}
 		else
 		{
-			printf("%14c |", '.');
+			printf("%17c |", '.');
 		}
 		
 		if (b)
