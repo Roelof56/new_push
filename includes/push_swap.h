@@ -43,8 +43,6 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b);
 
 /* parse_input.c */
 int		import_arguments(int argc, char **argv, t_list **stack_a);
-// int		create_list(int argc, char **argv, t_list **stack_a);
-// int		check_args(int argc, char **argv);
 
 /* utils_list.c */
 t_list	*ft_lstnew(int nbr);
