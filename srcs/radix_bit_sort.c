@@ -18,16 +18,13 @@ static int get_bit(int n, int loc)
 	return (i);
 }
 
-static void	bit_flip_negative(t_list *list) // remove the copy ? !
+static void	bit_flip_negative(t_list *head)
 {
-	t_list	*cpy;
-
-	cpy = list;
-	while (cpy)
+	while (head)
 	{
-		if (cpy->sign == -1)
-			cpy->nbr = flip_bits(cpy->nbr);
-		cpy = cpy->next;
+		if (head->sign == -1)
+			head->nbr = flip_bits(head->nbr);
+		head = head->next;
 	}
 }
 
@@ -36,7 +33,7 @@ static void print_binary(int n)
 {
 	int	i;
 	int	j;
-	
+
 	i = 31;
 	j = 0;
 	printf("%14d : ", n);
@@ -84,8 +81,6 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b)
 	printf("\nafter bit flip: \n");
 	print_stack_binary(*(head_a));
 
-	// sort some stuff.
-
 	len = ft_lstsize(*(head_a));
 	while (i < 31)
 	{
@@ -110,7 +105,7 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b)
 	}
 	//revert numbers back to original.
 	bit_flip_negative(*(head_a));
-	// print_stacks(program);
+	print_stacks(*(head_a), *(head_b));
 
 	//put negatives back in in reverse order.
 	i = 0;

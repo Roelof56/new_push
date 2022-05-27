@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(stack_a) == 1)
 	{
-		// clean that list.
+		clean_list(stack_a);
 		return (0);
 	}
 	len = ft_lstsize(stack_a);
@@ -37,7 +37,8 @@ int	main(int argc, char **argv)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b);
-	// clean_list(stack_a);
+	// print_stacks(stack_a, stack_b);
+	clean_list(stack_a);
 	return (0);
 }
 
