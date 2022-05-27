@@ -12,7 +12,7 @@ SRCS			=	srcs/main.c \
 					srcs/handle_less.c \
 					srcs/radix_bit_sort.c \
 
-FLAGS			=	-Wall -Wextra -Werror -g #-fsanitize=address
+FLAGS			=	-Wall -Wextra -Werror -fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
 
 ARG				=	`seq 0 50 | sort -R | tr "\n" " "`
