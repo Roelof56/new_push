@@ -34,7 +34,7 @@ static void	split_stack(t_list **head_a, t_list **head_b)
 	len_a = ft_lstsize(*(head_a));
 	while (len_a > 3)
 	{
-		get_lowest(*(head_a), &current_low);
+		low_loc = get_lowest(*(head_a), &current_low);
 		if (low_loc <= (len_a / 2))
 		{
 			while ((*(head_a))->nbr != current_low)
