@@ -36,7 +36,10 @@ run		:	all
 
 show	:	all
 			python3 ./push_swap_visualizer/pyviz.py $(ARG)
-			
+
+leak	:	all
+			valgrind --leak-check=full ./push_swap $(ARG7)
+
 checker	:	all
 			./$(NAME) $(ARG) | ./checker_Mac $(ARG)
 
