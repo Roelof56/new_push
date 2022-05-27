@@ -16,7 +16,7 @@ FLAGS			=	-Wall -Wextra -Werror -g #-fsanitize=address
 OBJS			=	$(SRCS:.c=.o)
 
 ARG				=	`seq 0 50 | sort -R | tr "\n" " "`
-ARG6			=	4 2 -8 12 15 1
+ARG6			=	4 2 0 -2 -6 -4
 ARG7			=	7 4 1 -100 9 11 -50 
 ARG9			=	-50 -150 -250 -200 -300 -350 -400 -500 -600
 ARG30			=	14 20 11 12 16 19 24 18 8 7 6 3 4 5 9 0 -14 -20 -10 -12 -16 -22 -24 -18 -8 -7 -6 -3 -4 -5 
@@ -32,16 +32,16 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) $(ARG9)
+			./$(NAME) $(ARG6)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG40)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG6)
 
 leak	:	all
 			valgrind --leak-check=full ./push_swap $(ARG40)
 
 checker	:	all
-			./$(NAME) $(ARG) | ./checker_Mac $(ARG)
+			./$(NAME) $(ARG6) | ./checker_Mac $(ARG6)
 
 clean	:
 	    	$(RM) $(OBJS)
