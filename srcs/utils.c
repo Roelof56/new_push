@@ -6,15 +6,15 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 15:00:02 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:03:33 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:06:28 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int is_sorted(t_list *head)
+int	is_sorted(t_list *head)
 {
-	t_list *cpy;
+	t_list	*cpy;
 
 	cpy = head;
 	while (cpy)
