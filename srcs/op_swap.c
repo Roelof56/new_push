@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   op_swap.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rhol <rhol@student.codam.nl>                 +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/06/02 14:59:47 by rhol          #+#    #+#                 */
+/*   Updated: 2022/06/02 15:01:17 by rhol          ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // sa (swap a): Swap the first 2 elements at the top of stack a.
@@ -10,11 +22,9 @@ void	sa(t_list **head_a, t_bool print)
 
 	if (ft_lstsize(*(head_a)) <= 1)
 		return ;
-	//current list.
 	head = *(head_a);
 	second = head->next;
 	third = head->next->next;
-	//re-assign.
 	head->next = third;
 	second->next = head;
 	*(head_a) = second;
@@ -33,11 +43,9 @@ void	sb(t_list **head_b, t_bool print)
 
 	if (ft_lstsize(*(head_b)) <= 1)
 		return ;
-	//current list.
 	head = *(head_b);
 	second = head->next;
 	third = head->next->next;
-	//re-assign.
 	head->next = third;
 	second->next = head;
 	*(head_b) = second;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   op_push.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rhol <rhol@student.codam.nl>                 +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/06/02 14:59:35 by rhol          #+#    #+#                 */
+/*   Updated: 2022/06/02 14:59:35 by rhol          ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // pb (push b): Take the first element at the top of a and put it at the top of b.

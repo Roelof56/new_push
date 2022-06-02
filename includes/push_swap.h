@@ -1,5 +1,17 @@
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   push_swap.h                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rhol <rhol@student.codam.nl>                 +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/06/02 14:57:06 by rhol          #+#    #+#                 */
+/*   Updated: 2022/06/02 14:57:07 by rhol          ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdio.h>
 # include <stdarg.h>

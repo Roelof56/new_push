@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   main.c                                             :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rhol <rhol@student.codam.nl>                 +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
+/*   Updated: 2022/06/02 15:02:05 by rhol          ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	clean_list(t_list *head)
 {
-	t_list *next;
+	t_list	*next;
 
 	while (head)
 	{
@@ -37,13 +49,7 @@ int	main(int argc, char **argv)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b);
-	// print_stacks(stack_a, stack_b);
 	clean_list(stack_a);
-	system("leaks push_swap");
-	while (1)
-	{
-		
-	}
 	return (0);
 }
 
