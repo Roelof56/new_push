@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:04:06 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:21:01 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static void	handle_subzero_ints(t_list **head_a, t_list **head_b, int len)
 {
 	int	i;
 
+	bit_flip_negative(*(head_a));
 	i = 0;
 	while (i < len && *(head_a))
 	{
@@ -71,25 +72,21 @@ static void	handle_subzero_ints(t_list **head_a, t_list **head_b, int len)
 /*
 **	sort based on bit vallue left to right.
 */
-void	radix_bit_sort(t_list **head_a, t_list **head_b)
+void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 {
 	int		i;
 	int		j;
-	int		len;
 	t_bool	contains_negative;
 
 	i = 0;
 	contains_negative = bit_flip_negative(*(head_a));
-	len = ft_lstsize(*(head_a));
 	while (i < 31)
 	{
 		j = 0;
 		while (j < len)
 		{
 			if (get_bit((*(head_a))->nbr, i) == 0)
-			{
 				pb(head_a, head_b);
-			}
 			else
 				ra(head_a, true);
 			j++;
@@ -101,8 +98,5 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b)
 		i++;
 	}
 	if (contains_negative == true)
-	{
-		bit_flip_negative(*(head_a));
 		handle_subzero_ints(head_a, head_b, len);
-	}
 }

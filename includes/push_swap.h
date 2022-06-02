@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:57:06 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:09:49 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:21:16 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ss(t_list **head_a, t_list **head_b);
 void	handle_less(t_list **head_a, t_list **head_b);
 
 /* radix_bit_sort.c */
-void	radix_bit_sort(t_list **head_a, t_list **head_b);
+void	radix_bit_sort(t_list **head_a, t_list **head_b, int len);
 
 /* parse_input.c */
 int		import_arguments(int argc, char **argv, t_list **stack_a);
