@@ -37,8 +37,13 @@ int	main(int argc, char **argv)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b);
-	print_stacks(stack_a, stack_b);
+	// print_stacks(stack_a, stack_b);
 	clean_list(stack_a);
+	system("leaks push_swap");
+	while (1)
+	{
+		
+	}
 	return (0);
 }
 
