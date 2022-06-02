@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:51 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:04:36 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:16:15 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,14 @@ int	import_arguments(int argc, char **argv, t_list **stack_a)
 	if (check_args(argc, argv) < 0)
 		return (-1);
 	if (create_list(argc, argv, stack_a) < 0)
+	{
+		clean_list(*(stack_a));
 		return (-1);
+	}
 	if (check_for_duplicates(*(stack_a)) < 0)
+	{
+		clean_list(*(stack_a));
 		return (-1);
+	}	
 	return (1);
 }

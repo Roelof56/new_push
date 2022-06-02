@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:12:51 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:14:14 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
 		write(2, "Error\n", 6);
-		exit(0);
+		return (0);
 	}
 	if (is_sorted(stack_a) == 1)
 	{
