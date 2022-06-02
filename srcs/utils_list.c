@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:58 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 14:59:58 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:03:49 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_lstsize(t_list *head)
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = lst;
 	if (lst == NULL)

@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:47 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:01:17 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:04:42 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	sa(t_list **head_a, t_bool print)
 	head->next = third;
 	second->next = head;
 	*(head_a) = second;
-
 	if (print == true)
 		write(1, "sa\n", 3);
 }

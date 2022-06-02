@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 15:00:02 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:00:02 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:03:33 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ long	ft_atoi(const char *str)
 	min = 1;
 	res = 0;
 	i = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
+	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || \
 						str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
 		str++;
 	if (str[i] == '-')
@@ -84,7 +84,6 @@ void	print_stacks(t_list *stack_a, t_list *stack_b)
 		{
 			printf("%17c |", '.');
 		}
-		
 		if (b)
 		{
 			printf("%4d ", b->nbr);

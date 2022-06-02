@@ -6,13 +6,13 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:35 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 14:59:35 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:05:10 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// pb (push b): Take the first element at the top of a and put it at the top of b.
+// (push b): Take the first element at the top of a and put it at the top of b.
 // Do nothing if a is empty
 void	pb(t_list **head_a, t_list **head_b)
 {
@@ -32,7 +32,7 @@ void	pb(t_list **head_a, t_list **head_b)
 	write(1, "pb\n", 3);
 }
 
-// pa (push a): Take the first element at the top of b and put it at the top of a.
+// (push a): Take the first element at the top of b and put it at the top of a.
 // Do nothing if b is empty.
 void	pa(t_list **head_a, t_list **head_b)
 {

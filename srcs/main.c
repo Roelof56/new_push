@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:02:05 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:05:18 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,3 @@ int	main(int argc, char **argv)
 	clean_list(stack_a);
 	return (0);
 }
-

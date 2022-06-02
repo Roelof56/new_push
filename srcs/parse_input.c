@@ -6,13 +6,13 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:51 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 14:59:52 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:04:36 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int is_valid_int(long x)
+static int	is_valid_int(long x)
 {
 	if (x < INT_MIN || x > INT_MAX)
 		return (-1);
@@ -21,7 +21,7 @@ static int is_valid_int(long x)
 
 static int	check_args(int argc, char **argv)
 {
-	int i;
+	int	i;
 	int	j;
 
 	i = 1;
@@ -57,7 +57,7 @@ static int	create_list(int argc, char **argv, t_list **stack_a)
 		if (is_valid_int(tmp) < 0)
 			return (-1); // clean list.
 		new = ft_lstnew(tmp);
-		if (!new) 
+		if (!new)
 			return (-1); // also clean list.
 		ft_lstadd_back(stack_a, new);
 		i++;
@@ -67,7 +67,7 @@ static int	create_list(int argc, char **argv, t_list **stack_a)
 
 static int	check_for_duplicates(t_list *head)
 {
-	t_list *cpy;
+	t_list	*cpy;
 
 	while (head)
 	{
