@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:57:06 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 14:57:07 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:09:49 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ t_list	*ft_lstnew(int nbr);
 void	ft_lstadd_back(t_list **head, t_list *new);
 int		ft_lstsize(t_list *head);
 t_list	*ft_lstlast(t_list *lst);
+void	clean_list(t_list *head);
 
 /* utils.c */
 int		is_sorted(t_list *head);

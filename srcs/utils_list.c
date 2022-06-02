@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:58 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:03:49 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:10:14 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,16 @@ t_list	*ft_lstlast(t_list *lst)
 		tmp = tmp->next;
 	}
 	return (tmp);
+}
+
+void	clean_list(t_list *head)
+{
+	t_list	*next;
+
+	while (head)
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
 }
