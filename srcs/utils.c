@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 15:00:02 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:06:28 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/02 15:23:46 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ long	ft_atoi(const char *str)
 	}
 	return (res * min);
 }
+
 
 void	print_stacks(t_list *stack_a, t_list *stack_b)
 {
