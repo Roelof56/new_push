@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:21:01 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/27 12:33:56 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ static t_bool	bit_flip_negative(t_list *head)
 	return (contains_negative);
 }
 
+/*
+** if a to be sorted integer is negative. push from a to b.
+** push em back if all are out.
+*/
 static void	handle_subzero_ints(t_list **head_a, t_list **head_b, int len)
 {
 	int	i;
@@ -70,7 +74,7 @@ static void	handle_subzero_ints(t_list **head_a, t_list **head_b, int len)
 }
 
 /*
-**	sort based on bit vallue left to right.
+**	sort based on bit vallue right to left.
 */
 void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 {
