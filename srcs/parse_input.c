@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:51 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:16:15 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 11:11:20 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ static int	create_list(int argc, char **argv, t_list **stack_a)
 	{
 		tmp = ft_atoi(argv[i]);
 		if (is_valid_int(tmp) < 0)
-			return (-1); // clean list.
+			return (-1);
 		new = ft_lstnew(tmp);
 		if (!new)
-			return (-1); // also clean list.
+			return (-1);
 		ft_lstadd_back(stack_a, new);
 		i++;
 	}

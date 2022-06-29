@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/27 12:29:39 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 11:12:28 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc <= 2)
+	if (argc <= 2) // gotte error on one argument.
 		return (0);
 	if (import_arguments(argc, argv, &stack_a) < 0)
 	{
@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b, len);
-	print_stacks(stack_a, stack_b);
+	// print_stacks(stack_a, stack_b);
 	clean_list(stack_a);
 	return (0);
 }
