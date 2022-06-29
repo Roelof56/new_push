@@ -6,7 +6,7 @@
 #    By: rhol <rhol@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/02 15:00:07 by rhol          #+#    #+#                  #
-#    Updated: 2022/06/29 11:03:55 by rhol          ########   odam.nl          #
+#    Updated: 2022/06/29 11:06:44 by rhol          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ run		:	all
 			./$(NAME) $(ARG6)
 
 test	:	all
-			./$(NAME) 21474836418 2147483646 2147483645
+			./$(NAME) -2147483648 2147483646 2147483645
 
 show	:	all
 			python3 ./push_swap_visualizer/pyviz.py $(ARG40)
