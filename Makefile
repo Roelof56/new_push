@@ -6,7 +6,7 @@
 #    By: rhol <rhol@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/02 15:00:07 by rhol          #+#    #+#                  #
-#    Updated: 2022/06/02 15:00:07 by rhol          ########   odam.nl          #
+#    Updated: 2022/06/29 10:59:05 by rhol          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ run		:	all
 			./$(NAME) $(ARG6)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG6)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG40)
 
 leak	:	all
 			valgrind --leak-check=full ./push_swap $(ARG40)
@@ -64,3 +64,6 @@ fclean	: 	clean
 re		:	fclean all
 
 .PHONY	:	clean fclean re all run
+
+# make output > output.txt && 	./push_swap $(< output.txt) | 
+#	./checker_Mac $(< output.txt); ./push_swap $(< output.txt) | wc -l;
