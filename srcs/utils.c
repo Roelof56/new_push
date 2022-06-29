@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 15:00:02 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 15:23:46 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 11:05:43 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
+/*
+**	My Libft atoi but with long instead of int.
+*/
 long	ft_atoi(const char *str)
 {
 	long	res;
@@ -54,10 +57,6 @@ long	ft_atoi(const char *str)
 		str++;
 	while (str[i] && ft_isdigit(str[i]))
 	{
-		if (i >= 10 && min == 1)
-			return (-1);
-		if (i >= 10 && min == -1)
-			return (0);
 		res = res * 10 + (str[i] - 48);
 		i++;
 	}
