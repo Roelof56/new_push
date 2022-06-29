@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 12:46:03 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 13:03:54 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,38 @@ static void	handle_subzero_ints(t_list **head_a, t_list **head_b, int len)
 		pa(head_a, head_b);
 	}
 }
+
+// helper function to print stack binary. // DELETE
+static void print_binary(int n)
+{
+	int	i;
+	int	j;
+
+	i = 31;
+	j = 0;
+	printf("%14d : ", n);
+	while (i >= 0)
+	{
+		if (j % 4 == 0)
+			printf(" ");
+		printf("%d", get_bit(n, i));
+		i--;
+		j++;
+	}
+	printf("\n");
+}
+
+// temp print function. // DELETE 
+void print_stack_binary(t_list *head)
+{
+	while (head)
+	{
+		printf("sign: %4d ", head->sign);
+		print_binary(head->nbr);
+		head = head->next;
+	}
+}
+// END DELETE STUFF.
 
 /*
 **	sort based on bit vallue right to left.
