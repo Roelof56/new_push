@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 13:52:53 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 14:05:38 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void print_binary(int n)
 
 	i = 31;
 	j = 0;
-	printf("%14d : ", n);
+	printf("%10d : ", n);
 	while (i >= 0)
 	{
 		if (j % 4 == 0)

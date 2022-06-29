@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:57:06 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 14:01:56 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 14:04:17 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ int		is_sorted(t_list *head);
 int		ft_isdigit(int c);
 long	ft_atoi(const char *str);
 void	print_stacks(t_list *stack_a, t_list *stack_b); // delete.
-void print_stack_binary(t_list *head); // del;
+void	print_stack_binary(t_list *head); // delete;
 
 #endif

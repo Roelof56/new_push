@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 13:02:32 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/29 14:06:19 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	len = ft_lstsize(stack_a);
+	printf("len: %d\n", len);
 	if (len <= 5)
 		handle_less(&stack_a, &stack_b);
 	else
