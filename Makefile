@@ -6,7 +6,7 @@
 #    By: rhol <rhol@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/02 15:00:07 by rhol          #+#    #+#                  #
-#    Updated: 2022/06/30 15:04:35 by rhol          ########   odam.nl          #
+#    Updated: 2022/06/30 16:01:55 by rhol          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror
 OBJS			=	$(SRCS:.c=.o)
 
-ARG				=	`seq -10000 -9900 | sort -R | tr "\n" " "`
+ARG				=	`seq 1 101 | sort -R | tr "\n" " "`
 ARG6			=	42 12 11 60 9 26
 ARG7			=	7 4 1 2 -3 -6 0
 
@@ -63,5 +63,5 @@ re		:	fclean all
 .PHONY	:	clean fclean re all run
 
 # make list 
-# ./push_swap $(< list.txt) | ./checker_Mac $(< list.txt); 
+# ./push_swap $(< list.txt) | ./checker_Mac $(< list.txt); ./push_swap $(< list.txt) | wc -l;
 # ./push_swap $(< list.txt) | wc -l;
