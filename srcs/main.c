@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:31 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 14:06:19 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 12:49:46 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	len = ft_lstsize(stack_a);
-	printf("len: %d\n", len);
 	if (len <= 5)
 		handle_less(&stack_a, &stack_b);
 	else
 		radix_bit_sort(&stack_a, &stack_b, len);
 	// print_stacks(stack_a, stack_b);
-	print_stack_binary(stack_a);
+	// print_stack_binary(stack_a);
 	clean_list(stack_a);
 	return (0);
 }

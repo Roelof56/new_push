@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/29 14:05:38 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 12:49:41 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,22 @@ void print_stack_binary(t_list *head)
 }
 // END DELETE STUFF.
 
+//testie time. v5 special.
+int	check_this_stuff(t_list *head_a, int i)
+{
+	while (head_a)
+	{
+		if (get_bit(head_a->nbr, i) == 1)
+		{
+			head_a = head_a->next;
+			continue ;
+		}
+		else
+			return (0);
+	}
+	return (1);
+}
+
 /*
 **	sort based on bit vallue right to left.
 */
@@ -113,17 +129,25 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 	int		i;
 	int		j;
 	t_bool	contains_negative;
+	static int count_ra;
 
 	i = 0;
 	contains_negative = bit_flip_negative(*(head_a));
 	while (i < 31)
 	{
 		j = 0;
-		printf("i: %d\n", i); //tmp
 		while (j < len)
 		{
 			if (get_bit((*(head_a))->nbr, i) == 0)
 				pb(head_a, head_b);
+			else if (j == 0 && get_bit((*(head_a))->nbr, i) == 1)
+			{
+				if (check_this_stuff(*(head_a), i) > 0)
+				{
+					count_ra++;
+					// printf("same bit value @ place: %d\n", i);
+				}
+			}
 			else
 				ra(head_a, true);
 			j++;
@@ -136,4 +160,5 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 	}
 	if (contains_negative == true)
 		handle_subzero_ints(head_a, head_b, len);
+	// printf("count ra = %d\n len = %d\n", count_ra, len);
 }
