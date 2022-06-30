@@ -6,7 +6,7 @@
 #    By: rhol <rhol@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/02 15:00:07 by rhol          #+#    #+#                  #
-#    Updated: 2022/06/30 13:01:47 by rhol          ########   odam.nl          #
+#    Updated: 2022/06/30 13:12:07 by rhol          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror
 OBJS			=	$(SRCS:.c=.o)
 
-ARG				=	`seq -1000 -500 | sort -R | tr "\n" " "`
+ARG				=	`seq -2147483648 -2147483148 | sort -R | tr "\n" " "`
 ARG6			=	42 12 11 60 9 26
 ARG7			=	7 4 1 2 -3 -6 0
 
@@ -41,16 +41,13 @@ $(NAME)	:	$(OBJS)
 			@echo $(NAME) has been made!
 
 run		:	all
-			./$(NAME) $(ARG6)
+			./$(NAME) $(ARG)
 
 show	:	all
-			python3 ./push_swap_visualizer/pyviz.py $(ARG40)
+			python3 ./push_swap_visualizer/pyviz.py $(ARG)
 
 leak	:	all
-			valgrind --leak-check=full ./push_swap $(ARG40)
-
-checker	:	all
-			./$(NAME) $(< list.txt) | ./checker_Mac $(list.txt)
+			valgrind --leak-check=full ./push_swap $(ARG)
 
 output	:	all
 			@echo $(ARG) >> list.txt

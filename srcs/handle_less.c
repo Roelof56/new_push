@@ -6,12 +6,16 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:26 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/02 14:59:26 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 13:10:32 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+** find the lowest nbr in list head. put it on the pointer adress.
+** returns int wich is the location in the list of the lowest number found.
+*/
 static int	get_lowest(t_list *head, int *low)
 {
 	t_list	*copy;
@@ -37,6 +41,9 @@ static int	get_lowest(t_list *head, int *low)
 	return (lowest_loc);
 }
 
+/*
+** push lowest number from stack_a to b until 3 listitems are left.
+*/
 static void	split_stack(t_list **head_a, t_list **head_b)
 {
 	int	len_a;
@@ -89,6 +96,9 @@ static void	handle_three(t_list **head)
 	}
 }
 
+/*
+** say something usefull about this.
+*/
 void	handle_less(t_list **head_a, t_list **head_b)
 {
 	int	len_a;
