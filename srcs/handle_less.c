@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:26 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/30 13:10:32 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 13:22:05 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ static void	handle_three(t_list **head)
 }
 
 /*
-** say something usefull about this.
+** Say something usefull about this.
 */
 void	handle_less(t_list **head_a, t_list **head_b)
 {

@@ -6,7 +6,7 @@
 #    By: rhol <rhol@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/02 15:00:07 by rhol          #+#    #+#                  #
-#    Updated: 2022/06/30 13:12:07 by rhol          ########   odam.nl          #
+#    Updated: 2022/06/30 14:09:31 by rhol          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS			=	srcs/main.c \
 FLAGS			=	-Wall -Wextra -Werror
 OBJS			=	$(SRCS:.c=.o)
 
-ARG				=	`seq -2147483648 -2147483148 | sort -R | tr "\n" " "`
+ARG				=	`seq -100 -1 | sort -R | tr "\n" " "`
 ARG6			=	42 12 11 60 9 26
 ARG7			=	7 4 1 2 -3 -6 0
 
@@ -49,7 +49,7 @@ show	:	all
 leak	:	all
 			valgrind --leak-check=full ./push_swap $(ARG)
 
-output	:	all
+list	:	all
 			@echo $(ARG) >> list.txt
 
 clean	:
@@ -62,6 +62,6 @@ re		:	fclean all
 
 .PHONY	:	clean fclean re all run
 
-# make output 
+# make list 
 # ./push_swap $(< list.txt) | ./checker_Mac $(< list.txt); 
 # ./push_swap $(< list.txt) | wc -l;
