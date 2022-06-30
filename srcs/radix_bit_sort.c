@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/30 15:02:34 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 15:54:15 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,20 +106,20 @@ void print_stack_binary(t_list *head)
 // END DELETE STUFF.
 
 //testie time. v5 special.
-int	check_bit_loc_list(t_list *head_a, int i)
+t_bool	list_has_same_bit_val(t_list *head_a, int i, int val)
 {
 	// printf("hi\n");
 	while (head_a)
 	{
-		if (get_bit(head_a->nbr, i) == 1)
+		if (get_bit(head_a->nbr, i) == val)
 		{
 			head_a = head_a->next;
 			continue ;
 		}
 		else
-			return (0);
+			return (false);
 	}
-	return (1);
+	return (true);
 }
 
 /*
@@ -130,7 +130,6 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 	int		i;
 	int		j;
 	t_bool	contains_negative;
-	// int count_ra = 0;
 
 	i = 0;
 	contains_negative = bit_flip_negative(*(head_a));
@@ -139,17 +138,14 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 		j = 0;
 		while (j < len)
 		{
-			// if (get_bit((*(head_a))->nbr, i) == 1)
-			// {
-			// 	if (check_bit_loc_list(*(head_a), i) > 0)
-			// 	{
-			// 		// printf("i: %d\n", i);
-			// 		// count_ra++;
-			// 		// j++;
-			// 		// continue ;
-			// 		printf("same bit value @ place: %d\n", i);
-			// 	}
-			// }
+			if (get_bit((*(head_a))->nbr, i) == 1 && j == 0)
+			{
+				if (list_has_same_bit_val(*(head_a), i, 1) == true)
+				{
+					j++;
+					continue ;
+				}
+			}
 			if (get_bit((*(head_a))->nbr, i) == 0)
 				pb(head_a, head_b);
 			else
