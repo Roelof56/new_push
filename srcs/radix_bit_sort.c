@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/06/30 15:54:15 by rhol          ########   odam.nl         */
+/*   Updated: 2022/06/30 15:55:14 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,7 +138,7 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 		j = 0;
 		while (j < len)
 		{
-			if (get_bit((*(head_a))->nbr, i) == 1 && j == 0)
+			if (get_bit((*(head_a))->nbr, i) == 1 && j == 0) // why?
 			{
 				if (list_has_same_bit_val(*(head_a), i, 1) == true)
 				{
