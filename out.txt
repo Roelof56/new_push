@@ -1,0 +1,693 @@
+rm -f srcs/main.o srcs/utils.o srcs/utils_list.o srcs/op_push.o srcs/op_reverse.o srcs/op_rotate.o srcs/op_swap.o srcs/parse_input.o srcs/handle_less.o srcs/radix_bit_sort.o
+rm -f push_swap
+cc -I ./includes/ -c  -o srcs/main.o srcs/main.c
+cc -I ./includes/ -c  -o srcs/utils.o srcs/utils.c
+cc -I ./includes/ -c  -o srcs/utils_list.o srcs/utils_list.c
+cc -I ./includes/ -c  -o srcs/op_push.o srcs/op_push.c
+cc -I ./includes/ -c  -o srcs/op_reverse.o srcs/op_reverse.c
+cc -I ./includes/ -c  -o srcs/op_rotate.o srcs/op_rotate.c
+cc -I ./includes/ -c  -o srcs/op_swap.o srcs/op_swap.c
+cc -I ./includes/ -c  -o srcs/parse_input.o srcs/parse_input.c
+cc -I ./includes/ -c  -o srcs/handle_less.o srcs/handle_less.c
+cc -I ./includes/ -c  -o srcs/radix_bit_sort.o srcs/radix_bit_sort.c
+cc srcs/main.o srcs/utils.o srcs/utils_list.o srcs/op_push.o srcs/op_reverse.o srcs/op_rotate.o srcs/op_swap.o srcs/parse_input.o srcs/handle_less.o srcs/radix_bit_sort.o -Wall -Wextra -Werror -o push_swap
+push_swap has been made!
+./push_swap `seq 200 210 | sort -R | tr "\n" " "`
+ra
+ra
+pb
+ra
+ra
+pb
+pb
+ra
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+ra
+pb
+pb
+ra
+ra
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+ra
+ra
+pb
+pb
+pb
+ra
+pb
+ra
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+ra
+ra
+pb
+ra
+pb
+pa
+pa
+pa
+ra
+ra
+ra
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pb
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+pa
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+hi from all == 1
+stack:        a   |   b
+       _____________________
+          202 ( 1)|   .
+          204 ( 1)|   .
+          205 ( 1)|   .
+          207 ( 1)|   .
+          206 ( 1)|   .
+          200 ( 1)|   .
+          201 ( 1)|   .
+          203 ( 1)|   .
+          208 ( 1)|   .
+          209 ( 1)|   .
+          210 ( 1)|   .
+
+sign:    1        202 :  0000 0000 0000 0000 0000 0000 1100 1010
+sign:    1        204 :  0000 0000 0000 0000 0000 0000 1100 1100
+sign:    1        205 :  0000 0000 0000 0000 0000 0000 1100 1101
+sign:    1        207 :  0000 0000 0000 0000 0000 0000 1100 1111
+sign:    1        206 :  0000 0000 0000 0000 0000 0000 1100 1110
+sign:    1        200 :  0000 0000 0000 0000 0000 0000 1100 1000
+sign:    1        201 :  0000 0000 0000 0000 0000 0000 1100 1001
+sign:    1        203 :  0000 0000 0000 0000 0000 0000 1100 1011
+sign:    1        208 :  0000 0000 0000 0000 0000 0000 1101 0000
+sign:    1        209 :  0000 0000 0000 0000 0000 0000 1101 0001
+sign:    1        210 :  0000 0000 0000 0000 0000 0000 1101 0010
