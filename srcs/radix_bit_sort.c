@@ -6,7 +6,7 @@
 /*   By: rhol <rhol@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/02 14:59:55 by rhol          #+#    #+#                 */
-/*   Updated: 2022/07/01 12:24:05 by rhol          ########   odam.nl         */
+/*   Updated: 2022/07/01 13:46:58 by rhol          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,11 +140,13 @@ void	radix_bit_sort(t_list **head_a, t_list **head_b, int len)
 		{
 			if (get_bit((*(head_a))->nbr, i) == 1) //  && j == 0 ?
 			{
-				printf("hi from all == 1\n");
+				printf("bit is 1 on stack_a, column: %d\n", i);
 				if (list_has_same_bit_val(*(head_a), i, 1) == true)
-				{ // does this even trigger like this?
-					j++;
-					continue ;
+				{
+					printf("column: %d\n", i);
+					print_stack_binary(*(head_a));
+					print_stacks(*(head_a), *(head_b));
+					// break;
 				}
 			}
 			if (get_bit((*(head_a))->nbr, i) == 0)
